@@ -17,8 +17,7 @@ console.log(hello() );
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName( name ) {
-  console.log('Hello,' ,  name);
-  return;
+  return `Hello, ${name}`;
 }
 // Remember to call the function to test
 console.log(helloName('John') );
@@ -55,18 +54,18 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( numArray ) {
-  if( numArray.length === 0){
+function getLast( arr ) {
+  if( arr.length === 0){
     return undefined;
   }
   
   else{
-    return numArray[numArray.length - 1];
+    return arr[arr.length - 1];
   }
 }
-let numArray = ['One' , 'Two' , 'Three' , 'Four'] // array function last search
+let arr = ['One' , 'Two' , 'Three' , 'Four'] // array function last search
 
-let lastValue = getLast(numArray);
+let lastValue = getLast(arr);
 console.log(lastValue);
 let undefinedValue = getLast([]);
 console.log(undefinedValue);
@@ -74,14 +73,14 @@ console.log(undefinedValue);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let hobbyArray = ['Soccer' , 'Snowboarding' , 'Wakeboarding'];
+let array = ['Soccer' , 'Snowboarding' , 'Wakeboarding'];
 
 
 
-function find( value, hobbyArray ){
+function find( value, array ){
 let valueFound = false;
-  for( let i = 0; i < hobbyArray.length; i++ ){
-    if(hobbyArray[i] === value){
+  for( let i = 0; i < array.length; i++ ){
+    if(array[i] === value){
       valueFound = true;
       break;
     }
@@ -90,11 +89,11 @@ console.log(valueFound);
 return valueFound;  
 }
 
-find('Soccer' , hobbyArray);
-find('Snowboarding' , hobbyArray);
-find('Hanging out with friends' , hobbyArray);
-find('Wakeboarding' , hobbyArray);
-find('Reading' , hobbyArray);
+find('Soccer' , array);
+find('Snowboarding' , array);
+find('Hanging out with friends' , array);
+find('Wakeboarding' , array);
+find('Reading' , array);
 
 // ----------------------
 // Stretch Goals
@@ -135,6 +134,7 @@ console.log(sumAll([1267 , 293 , -1234 , 56783]));
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+
 
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
